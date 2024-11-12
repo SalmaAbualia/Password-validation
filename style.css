@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", serif;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fffde2;
+}
+
+.container{
+    background-color: #fff;
+    width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px #ccc;
+}
+.container h2{
+    margin-bottom: 1rem;
+    background-color: #e8e8e8;
+    padding: 1rem .5rem;
+}
+.container .input_group{
+    position: relative;
+    margin-bottom: 2rem;
+    display: grid;
+    gap: 10px;
+}
+.container .input_group label{
+    display: block;
+
+}
+.container .input_group input{
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #6c6c6c;
+}
+.container .input_group input:focus{
+    background-color: #fffde2;
+}
+.container .input_group i{
+    position: absolute;
+    top: 38px;
+    right: 10px;
+    color: gray;
+    cursor: pointer;
+}
+.container .input_group.show .bx-hide{
+    visibility: hidden;
+}
+.container .input_group.show .bx-show-alt{
+    color: #6c6c6c;
+}
+
+.container ul{
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+.container ul li{
+    list-style-type: none;
+    position: relative;
+}
+.container ul li i{
+    position: absolute;
+    color: gray;
+}
+.container ul li span{
+    margin-left: 1.5rem;
+}
+
+.container ul li .bx-check-circle, .bx-error-circle{
+    visibility: hidden;
+}
+
+/*-----validation-----*/
+.container ul li.valid .bx-check-circle{
+    visibility: visible;
+    color: rgb(37, 204, 37);
+}
+.container ul li.valid .bxs-circle,
+.container ul li.unvalid .bxs-circle{
+    visibility: hidden;
+}
+
+.container ul li.valid .bx-error-circle{
+    visibility: hidden;
+}
+.container ul li.unvalid .bx-error-circle{
+    visibility: visible;
+    color: rgb(204, 37, 37);
+}
+
+.container ul li.unvalid span{
+    color: rgb(204, 37, 37);
+}
+.container ul li.valid span{
+    color: rgb(37, 204, 37);
+}
